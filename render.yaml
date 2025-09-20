@@ -5,3 +5,22 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
+    envVars:
+      - key: ADMIN_BOT_TOKEN
+        fromSecret: ADMIN_BOT_TOKEN
+      - key: ADMIN_ID
+        fromSecret: ADMIN_ID
+      - key: STORAGE_CHAT_ID
+        fromSecret: STORAGE_CHAT_ID
+      - key: BOT_USERNAME
+        fromSecret: BOT_USERNAME
+      - key: INTRO_IMAGE_URL
+        fromSecret: INTRO_IMAGE_URL
+      - key: D1_API_KEY
+        fromSecret: D1_API_KEY
+      - key: D1_ACCOUNT_ID
+        fromSecret: D1_ACCOUNT_ID
+      - key: D1_DATABASE_ID
+        fromSecret: D1_DATABASE_ID
+    healthCheckPath: /
+    autoDeploy: true
