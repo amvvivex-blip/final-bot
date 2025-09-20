@@ -63,7 +63,7 @@ INTRO_IMAGE_URL = os.environ.get("INTRO_IMAGE_URL", "https://ik.imagekit.io/qoob
 D1_API_KEY = os.environ.get("D1_API_KEY", "T-s2oVvvh0GV9sQJzZ-mJPhk0XQppFMvq8WAaEQx")
 D1_ACCOUNT_ID = os.environ.get("D1_ACCOUNT_ID", "26c0bbf6b8136d38f3e46d85f1121ece")
 D1_DATABASE_ID = os.environ.get("D1_DATABASE_ID", "5dd5ef12-051e-45c0-8ad1-905c3e35c1a9")
-D1_API_URL = f"https://dash.cloudflare.com/26c0bbf6b8136d38f3e46d85f1121ece/workers/d1/databases/5dd5ef12-051e-45c0-8ad1-905c3e35c1a9"
+D1_API_URL = f"https://api.cloudflare.com/client/v4/accounts/{D1_ACCOUNT_ID}/d1/database/{D1_DATABASE_ID}/query"
 
 # Auto-restart settings
 MAX_RESTART_ATTEMPTS = 10
